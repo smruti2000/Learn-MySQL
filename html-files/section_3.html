@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Section-3</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="icon" href="image/faviconn.ico">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="all_background">
+		<div class="all_background">
+		<div class="section">
+			SECTION-3
+		</div>
+		<hr class="section_hr">
+		<h1>
+			<center>
+				    <u>
+				    	<div class="a">
+				    		Creating, Removing and Getting Information for a Database
+				    	</div>
+				    </u>
+			</center>
+		</h1><br>
+		<h2>
+			Info about databases and tables
+		</h2>
+		<ul><h3>
+			<li>
+				<font color="red">Listing the databases</font> on the MySQL server host 
+				<ul>
+					<li>
+						<b>mysql></b>show databases;
+					</li>
+				</ul>
+			</li>
+
+			<li>
+				<font color="red">Access/change database</font> 
+				<ul>
+					<li>
+						<b>mysql></b>Use [database_name]
+					</li>
+				</ul>
+			</li>
+
+			<li>
+				<font color="red">Showing the current selected database</font> 
+				<ul>
+					<li>
+						<b>mysql></b> select database();
+					</li>
+				</ul>
+			</li>
+
+			 <li>
+				<font color="red">Showing tables in the current database</font> 
+				<ul>
+					<li>
+						<b>mysql></b> show tables;
+					</li>
+				</ul>
+			</li>
+
+			<li>
+				<font color="red">Showing the structure of a table</font> 
+				<ul>
+					<li>
+						<b>mysql></b>describe [table_name];
+					</li>
+				</ul>
+			</li>
+		</h3></ul>
+
+		<h2>
+			Using a Database
+		</h2>
+		<ul>
+			<h3>
+				<li>
+					To get started on your own database, first<font color="blue"> check which databases currently exist.</font>
+				</li>
+				<li>
+					Use the SHOW statement to find out which databases currently exist on the server (<u>and for which the user has privileges</u>):<br>
+				</li>
+			</h3>
+
+
+		<h4>
+			mysql> show databases;<br>
+
+			+-------------+<br>
+			| Database |<br>
+			+-------------+<br>
+			| mysql &nbsp &nbsp &nbsp &nbsp| <br>
+			| test  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp|<br>
+			+-------------+<br>
+			2 rows in set (0.01 sec)
+
+		</h4>
+		<h3>
+			<font color="red">View Users</font> (Before MySQL 5.7.6)
+			<ul>
+				<li>
+					<font color="blue">mysql> SELECT User, Host, Password FROM mysql.user;</font>
+				</li>
+			</ul>
+			<font color="red">Changing password for a user</font>
+			<ul>
+				<li>
+					After 5.7.6, use SET PASSWORD
+					<ul>
+						<li>
+							<font color="blue">mysql> ALTER USER user IDENTIFIED BY 'new_password';</font>
+						</li>
+						<li>
+							Ex.: ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
+						</li>
+					</ul>
+				</li>
+				<li>
+					Before 5.7.6, use SET PASSWORD:
+					<ul>
+						<li>
+							<font color="blue">mysql> SET PASSWORD FOR user = PASSWORD('new_password');</font>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<font color="red">Create a user</font>
+			<ul>
+				<li>
+					<font color="blue">mysql> CREATE USER user[IDENTIFIED BY 'new-password'];</font>
+				</li>
+				<li>
+					See “help CREATE USER”
+				</li>
+			</ul>
+
+			<font color="red">Remove a user</font>
+			<ul>
+				<li>
+					<font color="blue">mysql> DROP USER user;</font>
+				</li>
+			</ul>
+		
+		<li>
+			<font color="red">To create a new database</font>,issue the “create database” command:
+			<ul>
+				<li>
+					<font color="blue">mysql> create database webdb; </font>
+				</li>
+				<li>
+					Note:<b><u>Database names are case sensitive</u></b>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<font color="red">To the select a database</font>, issue the “use” command:
+			<ul>
+				<li>
+					<font color="blue">mysql> use webdb;</font>
+				</li>
+			</ul>
+		</li>
+
+		<li>
+			<font color="red">To see what database is selected</font>
+			<ul>
+				<li>
+					<font color="blue"> mysql> select database();</font>
+				</li>
+			</ul>
+		</li>
+		
+
+		</h3>
+		</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<center><a href="section_4.html" target="frame1"><b>Go To Next Section...</b></a></center>
+	</div>
+</body>
+</html>
