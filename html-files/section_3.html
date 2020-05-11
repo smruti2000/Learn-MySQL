@@ -172,29 +172,116 @@
 				</li>
 			</ul>
 		</li>
-		
-
 		</h3>
 		</ul>
 
+		<h2>
+			Creating a Table
+		</h2>
+		<ul>
+		<h3>
+			<li>
+				 Once you have selected a database, you <font color="red">can view all database tables: </font>
+			</li>
+			<li>
+				<font color="blue">mysql> show tables;</font>
+			</li>
+			<li>
+				An empty set indicates that I have not created any tables yet.
+			</li>
+			<li>
+				<font color="red">Let’s create a table </font>for storing pets.
+			</li>
+			<li>
+				<u>Table</u>:  pets 
+				<ul>
+					<li>
+						name: VARCHAR(20) 
+					</li>
+					<li>
+						owner: VARCHAR(20)
+					</li>
+					<li>
+						species: VARCHAR(20) 
+					</li>
+					<li>
+						sex: CHAR(1)
+					</li>
+					<li>
+						birth: DATE 
+					</li>
+					<li>
+						date: DATE
+					</li>
+				</ul>
+			</li>
+			<li>
+				To create a table, use the CREATE TABLE command: 
+				<br><br>
+				<font color="blue">
+				mysql> CREATE TABLE pet (<br>
+				&nbsp &nbsp &nbsp &nbsp &nbsp-> name VARCHAR(20),<br>
+				&nbsp &nbsp &nbsp &nbsp &nbsp-> owner VARCHAR(20), <br>
+				&nbsp &nbsp &nbsp &nbsp &nbsp-> species VARCHAR(20), <br>
+				&nbsp &nbsp &nbsp &nbsp &nbsp-> sex CHAR(1),<br>
+				&nbsp &nbsp &nbsp &nbsp &nbsp-> birth DATE, death DATE); <br><br>
+				Query OK, 0 rows affected (0.04 sec)
+		    </font>
+			</li>
+		</h3>	
+		</ul>
+		<h2>
+			Describing Tables
+		</h2>
+		<h3>
+			<ul>
+				<li>
+					 To view a table structure, use the DESCRIBE command:<br><br>
+					 <font color="blue">mysql> describe pet; </font>
+				</li>
+			</ul>
+		</h3>
 
+		<h2>
+			Deleting a Table
+		</h2>
+		<h3>
+			<ul>
+				<li>
+					 To delete an entire table, use the DROP TABLE command:<br><br>
+					 <font color="blue">mysql> drop table pet; </font>
+				</li>
+			</ul>
+		</h3>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<h2>
+			Manipulating Table Instances 
+		</h2>
+		<h3>
+			<ul>
+				<li>
+					<font color="red"> Remove records</font>of a table 
+					<ul>
+						<li>
+							<font color="blue">
+								mysql> DELETE FROM tableName;
+							</font>
+						</li>
+						<li>
+							[WHERE where_condition]; 
+						</li>
+					</ul>
+				</li>
+				<li>
+					<font color="red">Update records </font> of a table 
+					<ul>
+						<li>
+							<font color="blue">UPDATE pet SET birth = '198908-31' WHERE name ='Bowser';</font>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</h3>
 
 		<center><a href="section_4.html" target="frame1"><b>Go To Next Section...</b></a></center>
 	</div>

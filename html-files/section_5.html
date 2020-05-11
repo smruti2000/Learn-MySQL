@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Section-5</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="icon" href="image/faviconn.ico">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="all_background">
+		<div class="section">
+			SECTION-5
+		</div>
+		<hr class="section_hr">
+		<h2>
+			Introduction to CRUD
+		</h2>
+		<ul>	
+			<h3>
+				<li>
+					<b>CRUD</b> is an acronym for<br>
+					<b>
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<font color="red">C</font>reate<br>
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<font color="red">R</font>ead<br>
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<font color="red">U</font>pdate<br>
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<font color="red">D</font>elete
+					</b>
+				</li>
+				<li>
+					CRUD operations are basic data manipulation for database.
+				</li>
+				<li>
+					We've already learned how to perform create (i.e. insert), read (i.e. select), update and delete operations in previous sections.
+				</li>
+			</h3>
+		</ul>
+			<h2>
+				SELECT
+			</h2>
+			<h3>
+				<ul>
+					<li>
+						The SELECT statement is used to pull information from a table
+					</li>
+					<li>
+						The general format is:<br>
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						<font color="blue">
+							mysql> SELECT what_to_select FROM which_table; 
+						</font>
+					</li>
+					<li>
+						For Example:<br>
+						<ul>
+							<li>
+								<font color="blue">
+									mysql> SELECT * FROM pet;
+								</font><br>
+								O/P: It gives the all data of the "PET" table.
+							</li>
+							<li>
+								<font color="blue">
+									mysql> SELECT name,date FROM pet;
+								</font><br>
+								O/P: It gives only the name and date of the "PET" table.
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</h3>
+			<h2>
+				WHERE
+			</h2>
+			<h3>
+				<ul>
+					<li>
+						By "WHERE" we can add the conditions for our statementes.
+					</li>
+					<li>
+					The general format is:<br>
+					&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					<font color="blue">
+						mysql> SELECT what_to_select FROM which_table WHERE conditions_to_satisfy ; 
+					</font>
+					</li>
+					<li>
+					For Example:<br>
+					<ul>
+						<li>
+							<font color="blue">
+								mysql> SELECT * FROM pet WHERE age=10;
+							</font><br>
+							O/P: It gives the all data which cat have age-10 of the "PET" table.
+						</li>
+						<li>
+							<font color="blue">
+								mysql> SELECT name,date FROM pet WHERE name='piu';
+							</font><br>
+							O/P: It gives only the name and date which cat name="piu" of the "PET" table.
+						</li>
+					</ul>
+				</li>
+				</ul>
+			</h3>
+			<h2>
+				ALIASES(AS)
+			</h2>
+			<h3>
+				<ul>
+					<li>
+						Temperary change of the table header
+					</li>
+					<li>
+						But in the original table name can not be changed.
+					</li>
+					<li>
+					For Example:<br>
+					<ul>
+						<li>
+							<font color="blue">
+								mysql> SELECT name AS 'Pet_Name' FROM pet;
+							</font><br>
+							O/P: It gives the 'NAME' data of the "PET" table As Header name 'Pet_Name'.
+						</li>
+					</ul>
+					</li>
+				</ul>
+			</h3>	
+	</div>
+</body>
+</html>

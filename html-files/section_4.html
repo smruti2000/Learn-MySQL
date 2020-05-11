@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Section-4</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="icon" href="image/faviconn.ico">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="all_background">
+		<div class="all_background">
+		<div class="section">
+			SECTION-4
+		</div>
+		<hr class="section_hr">
+		<h2>
+			Inserting Data
+		</h2>
+		<h3>
+			<ul>
+				<li>
+					<font color="red">Use the INSERT statement to enter data into a table. </font>
+				</li>
+				<li>
+					For example:<br>
+					<h5><font color="blue">mysql> INSERT INTO pet VALUES ('Puffball','Diane','hamster','f', '1999-03-30',NULL);</font>  </h5>
+				</li>
+			</ul>
+		</h3>
+		<h2>
+			NOT NULL
+		</h2>
+		<h3>
+			<ul>
+				<li>
+					The NOT NULL constraint is a column constraint that ensures values stored in a column are not NULL.
+				</li>
+				<li>
+					For Example:<br>
+					<h5><font color="blue">mysql> CREATE TABLE pet (name VARCHAR(20) <b>NOT NULL</b>, owner VARCHAR(20) <b>NOT NULL</b>, species VARCHAR(20), sex CHAR(1) <b>NOT NULL</b>, birth DATE, death DATE); </font></h5>
+				</li>
+			</ul>
+		</h3>
+
+		<h2>
+			DEFAULT
+		</h2>
+		<h3>
+			<ul>
+				<li>
+					The MySQL DEFAULT keyword is a database CONSTRAINT or RULE that is applied when inserting new records into a table. If the value is not provided to any column while inserting a new row in the table, the default value will be used instead.
+				</li>
+				<li>
+					<h5>
+						<font color="blue">
+							mysql> CREATE TABLE pet (name VARCHAR(20) <b>DEFAULT 'SOME MESSAGE'</b>, owner_contact_no VARCHAR(20), species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
+						</font>
+					</h5>
+				</li>
+			</ul>
+		</h3>
+		<h2>
+			PRIMARY KEY
+		</h2>
+		<h3>
+			<ul>
+				<li>
+					A primary key is a column or a set of columns that uniquely identifies each row in the table. ... 
+				</li>
+				<li>
+					Any attempt to insert or update NULL to primary key columns will result in an error. 
+				</li>
+				<li>
+					<font color="red">Note that MySQL implicitly adds a NOT NULL constraint to primary key columns</font>
+				</li>
+				<li>
+					 A table can have one an only one primary key.
+				</li>
+				<li>
+					For Example:<br>
+					<h5>
+						<font color="blue">
+							mysql> CREATE TABLE pet (Pet_Id INT, name VARCHAR(20) DEFAULT 'SOME MESSAGE', owner_contact_no VARCHAR(20), species VARCHAR(20), sex CHAR(1), birth DATE, death DATE, <b>primary key(Pet_Id)</b>);
+						</font>
+					</h5>
+				</li>
+			</ul>
+		</h3>
+		<h2>
+			Auto Increment
+		</h2>
+		<h3>
+			<ul>
+				<li>
+					The "<b>AUTO_INCREMENT</b>" on the category_id field.
+				</li>
+				<li>
+					This causes the category Id to be automatically generated every time a new row is inserted into the table.
+				</li>
+				<li>
+					 It is not supplied when inserting data into the table,<b> MySQL</b> generates it.
+				</li>
+				<li>
+					For Example:<br>
+					<h5>
+						<font color="blue">
+							mysql> CREATE TABLE pet (Pet_Id INT <b>AUTO_INCREMENT</b>, name VARCHAR(20) DEFAULT 'SOME MESSAGE', owner_contact_no VARCHAR(20), species VARCHAR(20), sex CHAR(1), birth DATE, death DATE, primary key(Pet_Id));
+						</font>
+					</h5>
+					
+				</li>
+			</ul>
+		</h3>
+		<center><a href="section_5.html" target="frame1"><b>Go To Next Section...</b></a></center>
+	</div>
+</body>
+</html>
